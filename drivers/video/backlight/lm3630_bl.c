@@ -211,7 +211,6 @@ static int lm3630_intr_config(struct lm3630_chip_data *pchip)
 		backlight_on = false;
 
 		// Add external function calls here...
-
 #ifdef CONFIG_DYNAMIC_FSYNC
 		// if dynamic fsync is defined call external suspend function
 		dyn_fsync_suspend();
