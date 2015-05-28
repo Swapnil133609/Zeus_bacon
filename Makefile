@@ -335,7 +335,6 @@ GRAPHITE_LOOP := -floop-interchange \
 		 -floop-strip-mine \
 		 -floop-block	\
 		 -ftree-loop-linear \
-		 -floop-unroll-and-jam \
 		 -floop-nest-optimize
 
 OPTIMIZATIONS	:= -Ofast  $(call cc-disable-warning,maybe-uninitialized,) \
@@ -359,7 +358,7 @@ PARAMETERS    := --param l1-cache-size=32 --param l1-cache-line-size=32 --param 
 MODULO_SCHED  := -fmodulo-sched \
 		 -fmodulo-sched-allow-regmoves
 
-EXTRA_LOOP    := -ftree-loop-distribution \
+EXTRA_LOOP	:= -ftree-loop-distribution \
 		 -ftree-loop-if-convert \
 		 -ftree-loop-im \
 		 -ftree-loop-ivcanon \
