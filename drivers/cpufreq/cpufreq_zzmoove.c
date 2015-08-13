@@ -7828,7 +7828,7 @@ static int cpufreq_governor_dbs(struct cpufreq_policy *policy,
 		   &dbs_attr_group);
 #if defined(CONFIG_HAS_EARLYSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
 		unregister_early_suspend(&_powersave_early_suspend);
-#elif defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#elif defined(CONFIG_POWERSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT) || defined(CONFIG_POWERSUSPEND) && defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 		if (cpu == 0)
 		    unregister_power_suspend(&powersave_powersuspend);
 #endif
