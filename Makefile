@@ -339,7 +339,6 @@ GRAPHITE_LOOP := -floop-interchange \
 		 -floop-parallelize-all
 
 OPTIMIZATIONS	:= -Ofast  $(call cc-disable-warning,maybe-uninitialized,) \
-
 		 -fgcse-sm \
 		 -Wno-array-bounds \
 		 -Wno-error=strict-overflow
