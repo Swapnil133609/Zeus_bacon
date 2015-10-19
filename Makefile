@@ -328,15 +328,14 @@ include $(srctree)/scripts/Kbuild.include
 
 
 # Make variables (CC, etc...)
-GRAPHITE	:= -fgraphite \
-		 -fgraphite-identity \
-		 -fopenmp
+GRAPHITE      := -fgraphite \
+		 -fgraphite-identity
 
 GRAPHITE_LOOP := -floop-interchange \
 		 -floop-strip-mine \
 		 -floop-block	\
 		 -ftree-loop-linear \
-		 -floop-parallelize-all
+		 -floop-nest-optimize
 
 OPTIMIZATIONS	:= -Ofast  $(call cc-disable-warning,maybe-uninitialized,) \
 		 -fgcse-sm \
